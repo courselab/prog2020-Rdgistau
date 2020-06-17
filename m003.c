@@ -30,7 +30,7 @@ int is_prime (int a)
       break;
       } 
   }
-  if (r == 0) {
+  if (r == 0 && a != 1) {
     p = 1;
   } else {
     p = 0;
