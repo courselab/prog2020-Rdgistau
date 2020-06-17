@@ -24,13 +24,13 @@
 int is_prime (int a)
 {
   int i, r = 0, p = 0;
-  for (i = 2; i <= a/2; i++) {
+  for (i = 2; i < a; i++) {
     if (a % i == 0) {
       r++;
       break;
       } 
   }
-  if (r == 0 && a != 1) {
+  if (r == 0) {
     p = 1;
   } else {
     p = 0;
