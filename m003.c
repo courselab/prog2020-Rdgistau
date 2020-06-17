@@ -24,7 +24,7 @@
 int is_prime (int a)
 {
   int i, r = 0, p;
-  for (i = 2; i < a; i++) {
+  for (i = 2; i <= a/2; i++) {
     if (a % i == 0) {
       r++;
       break;
