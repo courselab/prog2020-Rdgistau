@@ -29,6 +29,7 @@ int is_prime (int a)
       r++;
     } 
   }
+  
   if (r == 1 || a == 1) {
     a = 1;
   } else {
