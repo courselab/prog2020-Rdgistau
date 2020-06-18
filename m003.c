@@ -24,15 +24,20 @@
 int is_prime (int a)
 {
   int i, r = 0;
-  for (i = 1; i < a; i++) {
-    if ((a % i) == 0) {
+  for (i = 1; i < a; i++) 
+  {
+    if ((a % i) == 0) 
+    {
       r++;
     } 
   }
   
-  if (r == 1 || a == 1) {
+  if (r == 1) 
+  {
     a = 1;
-  } else {
+  }
+  else 
+  {
     a = 0;
   }
   return a;
