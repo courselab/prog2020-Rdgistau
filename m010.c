@@ -30,7 +30,41 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+  int a[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  int dano = 0, i, d;
+  for (i = 0; i < (month-1); i++)
+  {
+    dano = dano + a[i];
+  }
+  dano = dano + day;
+  switch (dano % 7)
+    {
+      case 0:
+        d = 2;
+        break;
+      case 1:
+        d = 3;
+        break;
+      case 2:
+        d = 4;
+        break;
+      case 3:
+        d = 5;
+        break;
+      case 4:
+        d = 6;
+        break;
+      case 5:
+        d = 0;
+        break;
+      case 6:
+        d = 1;
+        break;
+      default:
+        d = 8;
+        break;
+    }
+  return d;
 }
 
 /* Do not edit function main. */

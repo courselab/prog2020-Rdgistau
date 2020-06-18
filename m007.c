@@ -28,6 +28,7 @@
 
 int lettercount (char *s)
 {
+  int count;
   return 0;
 }
 
