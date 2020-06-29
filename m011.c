@@ -35,9 +35,14 @@ int wordcount (char *filename)
   fp = fopen(filename, "r");
   while ((p = fgetc(fp)) != EOF)
   {
-    if ((p == ' ') || (p == '\n'))
+    if ((p != ' ' && p != '\n'))
+    {
+      i = 0;
+    }
+    if ((p == ' ' && i == 0) || (p == '\n' && i == 0))
     {
       count++;  
+      i = 1;
     }
   }
   fclose(fp);
