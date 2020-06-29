@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define USAGE "m011 <filename>\n"
 
@@ -28,8 +29,19 @@
 
 int wordcount (char *filename)
 {
-  
-  return 0;
+  FILE *fp;
+  int count = 0, i = 0;
+  char p;
+  fp = fopen(filename, "r");
+  while ((p = fgetc(fp)) != EOF)
+  {
+    if ((p == ' ') || (p == '\n'))
+    {
+      count++;  
+    }
+  }
+  fclose(fp);
+  return count;
 }
 
 /* Do not edit function main. */
