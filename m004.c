@@ -29,8 +29,14 @@
 
 int decimal (char *b)
 {
-  
-  return 0;
+  int n, r = 0, i, p = 1;
+  n = strlen (b);
+  for (i = n - 1; i >= 0; i--)
+  {
+    r = r + p * (b[i] - 48);
+    p = p * 2;
+  }
+  return r;
 }
 
 #define USAGE "m004 <string>\n"
